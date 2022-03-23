@@ -24,7 +24,7 @@
     ./networking/firewall.nix
     ./networking/networkmanager.nix
     ./networking/openssh.nix
-    ./networking/openvpn-surfshark.nix
+    #./networking/openvpn-surfshark.nix
 
     ./desktop-environment.nix
     

@@ -14,7 +14,7 @@
     };
     de-shark = {
       config = '' config /etc/nixos/services/vpn/surfshark/de-ber.prod.surfshark.com_udp.ovpn '';
-      autoStart = lib.mkDefault true;
+      autoStart = false;
       updateResolvConf = true;
     };
     fr-shark = {
