@@ -41,19 +41,21 @@
   environment.variables.BROWSER = "firefox";
   environment.variables.EDITOR = "nano";
   environment.variables.TERMINAL = "alacritty";
-  environment.variables.XDG_MENU_PREFIX = "lxqt-";
-  environment.variables.XDG_CURRENT_DESKTOP = "LXQt";
+  environment.variables.XDG_MENU_PREFIX = "lxde-";
+  environment.variables.XDG_CURRENT_DESKTOP = "LXDE";
 
   environment.systemPackages = with pkgs; [
     alacritty # a cross-platform, GPU-accelerated terminal emulator
     arandr # a simple visual front end for XRandR
     brightnessctl # this program allows you read and control device brightness
     delta # a syntax-highlighting pager for git
+    dmenu # a generic, highly customizable, and efficient menu for the X Window System
     eww # ElKowars wacky widgets
     featherpad # lightweight Qt5 Plain-Text Editor for Linux
     firefox-bin # Mozilla Firefox, free web browser (binary package)
     git # distributed version control system
     gitg # GNOME GUI client to view git repositories
+    haskellPackages.greenclip # simple clipboard manager to be integrated with rofi
     keepassxc # offline password manager with many features
     libsForQt5.okular # KDE document viewer
     lxqt.lximage-qt # the image viewer and screenshot tool for lxqt
@@ -62,10 +64,10 @@
     lxqt.lxqt-policykit # the LXQt PolicyKit agent
     lxqt.pavucontrol-qt # a Pulseaudio mixer in Qt (port of pavucontrol)
     lxqt.pcmanfm-qt # file manager and desktop icon manager (Qt port of PCManFM and libfm)
-    lxqt.qlipper # cross-platform clipboard history applet
     lxqt.qps # Qt based process manager
     lxqt.screengrab # crossplatform tool for fast making screenshots
     procs # a modern replacement for ps written in Rust
+    rofi # window switcher, run dialog and dmenu replacement
     speedcrunch # a fast power user calculator
     tealdeer # a very fast implementation of tldr in Rust
     xidlehook # xautolock rewrite in Rust, with a few extra features

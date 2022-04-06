@@ -14,7 +14,6 @@
     gnome.gnome-themes-extra
     gtk-engine-murrine # a very flexible theme engine
     gtk_engines # theme engines for GTK 2
-    hicolor-icon-theme # default fallback theme used by implementations of the icon theme spec
     lxappearance # lightweight program for configuring the theme and fonts of gtk applications
   ];
 }

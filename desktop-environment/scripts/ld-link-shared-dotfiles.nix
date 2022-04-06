@@ -14,6 +14,14 @@ let
     rm -fv "$HOME/.config/fish/config.fish"
     ln -s "$ldSharedDotfiles/.config/fish/config.fish" "$HOME/.config/fish/config.fish"
 
+    # `$HOME/.config/leftwm`
+    if ! [ -d "$HOME/.config/leftwm" ]; then
+      mkdir -p "$HOME/.config/leftwm"
+    fi
+
+    rm -fv "$HOME/.config/leftwm/config.toml"
+    ln -s "$ldSharedDotfiles/.config/leftwm/config.toml" "$HOME/.config/leftwm/config.toml"
+
     # `$HOME/Templates`
     if ! [ -d "$HOME/Templates" ]; then
       mkdir -p "$HOME/Templates"

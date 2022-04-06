@@ -11,6 +11,7 @@
     exa # replacement for 'ls' written in Rust
     fd # a simple, fast and user-friendly alternative to find
     ffsend # a fully featured Firefox Send client
+    fzf # a command-line fuzzy finder written in Go
     gparted # graphical disk partitioning tool
     gptfdisk # set of text-mode partitioning tools for Globally Unique Identifier (GUID) Partition Table (GPT) disks
     less # a more advanced file pager than ‘more’

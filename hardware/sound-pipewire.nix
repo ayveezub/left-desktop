@@ -19,5 +19,6 @@
 
   environment.systemPackages = with pkgs; [
     alsa-utils # the Advanced Linux Sound Architecture utils
+    pamixer # Pulseaudio command line mixer
   ];
 }
