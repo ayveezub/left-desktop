@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Reboot
+GenericName=Reboot
+Comment=reboot the machine
+Exec=loginctl reboot
+Icon=system-reboot
+Categories=System;X-Leave;
+OnlyShowIn=LXDE;
+
+#TRANSLATIONS_DIR=../translations

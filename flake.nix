@@ -6,9 +6,15 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, }:
     let
       system = "x86_64-linux";
+
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
       overlay-unstable = final: prev: {
         # Use this variant if unfree packages are needed:
         unstable = import nixpkgs-unstable {
@@ -26,5 +32,15 @@
           ./host_a11-dtop.nix
         ];
       };
+
+      nixosConfigurations."a11-tpad" = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          # Overlays-module makes "pkgs.unstable" available in configuration.nix:
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+          ./host_a11-tpad.nix
+        ];
+      };
     };
+
 }

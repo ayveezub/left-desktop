@@ -1,0 +1,142 @@
+/*
+ * breeze-papercolor-light.rasi
+ * rofi theme inspired by plasma breeze
+ * MonsieurBedard
+ * modified by ayveezub
+ */
+
+* {
+    /* Base */
+    default-background: rgba(238, 238, 238, 100%); // <- change this for transparency
+    default-foreground: rgba(68, 68, 68, 100%);
+    default-border: rgba(188, 188, 188, 100%);
+    alternative-background: rgba(252, 252, 252, 100%);
+    invisible: rgba(0, 0, 0, 0%);
+
+    /* Colors */
+    blue: rgba(0, 95, 135, 100%);
+    green: rgba(95, 135, 0, 100%);
+    red: rgba(215, 0, 0, 100%);
+
+    light-blue: rgba(95, 175, 215, 100%);
+    light-green: rgba(175, 215, 0, 1);
+    light-red: rgba(255, 95, 175, 100%);
+
+    /* Universal */
+    background-color: @invisible;
+    border-color: @default-border;
+    text-color: @default-foreground;
+}
+
+#window {
+    background-color: @default-background;
+    border: 1;
+    border-radius: 3;
+    border-color: @default-border;
+    padding: 7;
+
+    position: center;
+    anchor: center;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border: 1;
+    border-radius: 3;
+    padding: 5;
+    background-color: @alternative-background;
+}
+
+#textbox {
+    background-color: @alternative-background;
+}
+
+#listview {
+    fixed-height: 0;
+    spacing: 2;
+    scrollbar: false;
+    padding: 2 0 0;
+
+    columns:  1;
+    fixed-columns: true;
+    lines: 11;
+}
+
+#element {
+    padding: 5;
+    border: 1;
+    border-radius: 3;
+    border-color: @invisible;
+}
+
+#element.normal.normal {
+    background-color: @invisible;
+}
+
+#element.normal.urgent {
+    background-color: @light-red;
+}
+
+#element.normal.active {
+    background-color: @light-green;
+}
+
+#element.selected.normal {
+    background-color: @light-blue;
+    border-color:     @blue;
+}
+
+#element.selected.urgent {
+    background-color: @light-red;
+    border-color:     @red;
+}
+
+#element.selected.active {
+    background-color: @light-green;
+    border-color:     @green;
+}
+
+#mode-switcher {
+    spacing: 0;
+}
+
+#button {
+    border: 0 0 3 0;
+    border-color: @invisible;
+    padding: 3;
+}
+
+#button.selected {
+    border-color: @blue;
+}
+
+#inputbar {
+    spacing: 0;
+    padding: 1;
+}
+
+#case-indicator {
+    spacing: 0;
+    padding: 3px;
+    background-color: @alternative-background;
+    border: 1 1 1 0;
+    border-radius: 0 2 2 0;
+}
+
+#entry {
+    background-color: @alternative-background;
+    padding: 3px;
+    border: 1 0 1 1;
+    border-radius: 2 0 0 2;
+
+    placeholder: "Search";
+    placeholder-color: @default-background;
+}
+
+#prompt {
+    padding: 3 7 3 0;
+}

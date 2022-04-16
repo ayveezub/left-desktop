@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+
+leftwm-command "UnloadTheme"
+
+
+pkill pasystray
+pkill nm-tray
+
+pcmanfm-qt --quit
+pkill lxqt-notificationd
+pkill lxqt-policykit-agent
+
+pkill polybar

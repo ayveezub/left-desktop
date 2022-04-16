@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Logout
+GenericName=Logout
+Comment=system logout
+Exec=loginctl kill-session $XDG_SESSION_ID
+Icon=system-log-out
+Categories=System;X-Leave;
+OnlyShowIn=LXDE;
+
+#TRANSLATIONS_DIR=../translations

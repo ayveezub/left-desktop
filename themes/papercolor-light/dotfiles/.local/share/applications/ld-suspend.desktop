@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Suspend
+GenericName=Suspend
+Comment=suspend the machine
+Exec=loginctl suspend
+Icon=system-suspend
+Categories=System;X-Leave;
+OnlyShowIn=LXDE;
+
+#TRANSLATIONS_DIR=../translations

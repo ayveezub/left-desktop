@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Shutdown
+GenericName=Shutdown
+Comment=shutdown the machine
+Exec=loginctl poweroff
+Icon=system-shutdown
+Categories=System;X-Leave;
+OnlyShowIn=LXDE;
+
+#TRANSLATIONS_DIR=../translations
