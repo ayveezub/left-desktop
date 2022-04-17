@@ -15,10 +15,5 @@
     # https://github.com/lxqt/lxqt/issues/1521#issuecomment-405097453
     #
     export XDG_CONFIG_DIRS=$XDG_CONFIG_DIRS''${XDG_CONFIG_DIRS:+:}${config.system.path}/share
-
-    ld-export-xdg-user-vars
-
-
-    ld-apply-theme
   '';
 }

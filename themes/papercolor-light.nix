@@ -10,6 +10,9 @@ let
 
     ${rsyncCmd} "/etc/nixos/themes/${currentTheme}/dotfiles/" "$HOME"
 
+    rm -rf "$HOME/.config/leftwm/themes/current"
+    ln -s "$HOME/.config/leftwm/themes/${currentTheme}" "$HOME/.config/leftwm/themes/current"
+
     update-mime-database "$HOME/.local/share/mime"
 
     echo -e "Left Desktop: applied ${currentTheme} theme"

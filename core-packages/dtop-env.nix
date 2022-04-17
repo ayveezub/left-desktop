@@ -30,10 +30,9 @@
     speedcrunch # a fast power user calculator
     tealdeer # a very fast implementation of tldr in Rust
     xidlehook # xautolock rewrite in Rust, with a few extra features
-  ];
 
-  # Dependencies:
-  environment.systemPackages = with pkgs; [
+
+    # Dependencies:
     cargo # downloads your Rust project's dependencies and builds your project
     gcc # GNU Compiler Collection, version 10.3.0 (wrapper script)
     isocodes # various ISO codes packaged as XML files

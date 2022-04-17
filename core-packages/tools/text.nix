@@ -7,10 +7,9 @@
     featherpad # lightweight Qt5 Plain-Text Editor for Linux
     html2text # convert HTML to plain text
     libsForQt5.okular # KDE document viewer
-  ];
 
-  # Dependencies:
-  environment.systemPackages = with pkgs; [
+
+    # Dependencies:
     ncurses # free software emulation of curses in SVR4 and more
     pango # a library for laying out and rendering of text, with an emphasis on internationalization
   ];

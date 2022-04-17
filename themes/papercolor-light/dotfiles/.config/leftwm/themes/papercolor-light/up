@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+ld-export-xdg-user-vars
+xdg-user-dirs-update
 
 
 # Down the last running theme:
@@ -13,8 +17,6 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
 
-xdg-user-dirs-update
-
 # Disable screen saver blanking:
 xset s off
 
@@ -22,6 +24,10 @@ xset s off
 if [ -x "$(command -v feh)" ]; then
   feh --randomize --bg-fill --no-fehbg /etc/nixos/assets/wallpapers/bing/*
 fi
+
+
+lxqt-policykit-agent &
+lxqt-notificationd &
 
 
 index=0
@@ -36,9 +42,9 @@ do
 done
 
 
-lxqt-policykit-agent &
-lxqt-notificationd &
-pcmanfm-qt --daemon-mode --desktop-off &
+#nm-tray &
+#pasystray &
 
-nm-tray &
-pasystray &
+#pkill polybar
+#echo "---" | tee -a ~/.cache/polybar-mainbar0.log
+#polybar -c $SCRIPTPATH/polybar.config mainbar0 >>~/.cache/polybar-mainbar0.log 2>&1 &

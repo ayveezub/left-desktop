@@ -32,10 +32,9 @@
     woeusb # create bootable USB disks from Windows ISO images
     xdg-user-dirs # update user dirs as described in `http://freedesktop.org/wiki/Software/xdg-user-dirs/`
     zoxide # a fast cd command that learns your habits
-  ];
 
-  # Dependencies:
-  environment.systemPackages = with pkgs; [
+
+    # Dependencies:
     ntfs3g # FUSE-based NTFS driver with full write support
     sshfs # FUSE-based filesystem that allows remote filesystems to be mounted over SSH
   ];

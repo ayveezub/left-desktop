@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  etc."xdg/mimeapps.list" = {
+  environment.etc."xdg/mimeapps.list" = {
     text = ''
       [Default Applications]
       inode/directory=pcmanfm-qt.desktop

@@ -9,7 +9,6 @@
   fonts.fontconfig = {
     antialias = true;
     cache32Bit = true; # generate system fonts cache for 32-bit applications
-    dpi = 96;
     hinting.enable = true; # hinting aligns glyphs to pixel boundaries to improve rendering sharpness at low resolution
   };
 

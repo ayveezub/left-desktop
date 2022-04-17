@@ -9,10 +9,9 @@
     pigz # a parallel implementation of gzip for multi-core machines
     unar # an archive unpacker program
     unzip # an extraction utility for archives compressed in .zip format
-  ];
 
-  # Dependencies:
-  environment.systemPackages = with pkgs; [
+
+    # Dependencies:
     lz4 # extremely fast compression algorithm
     zlib # lossless data-compression library
   ];

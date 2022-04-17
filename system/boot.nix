@@ -10,4 +10,8 @@
 
   # Whether the installation process is allowed to modify EFI boot variables.
   boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
+
+  # Timeout (in seconds) until loader boots the default menu item.
+  # Use null if the loader menu should be displayed indefinitely.
+  boot.loader.timeout = 5;
 }

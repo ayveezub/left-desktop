@@ -1,6 +1,14 @@
 { config, pkgs, lib, ... }:
 
-{
+let
+  # Install a package from unstable while remaining on the stable channel:
+  #
+  # `sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable`
+  # `sudo nix-channel --update`
+  # 
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+
+in {
   imports = [
     # Include the results of the hardware scan:
     ./hardware-configuration.nix
@@ -81,8 +89,8 @@
 
   # `nixos-rebuild` for `a11-dtop` machine:
   environment.shellAliases = {
-    ld-rb = "sudo nixos-rebuild boot --flake '/etc/nixos#a11-dtop' && ld-apply-theme";
-    ld-rs = "sudo nixos-rebuild switch --flake '/etc/nixos#a11-dtop' && ld-apply-theme";
+    ld-rb = "sudo nixos-rebuild boot && ld-apply-theme";
+    ld-rs = "sudo nixos-rebuild switch && ld-apply-theme";
   };
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
@@ -90,7 +98,9 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.enp102s0.useDHCP = true;
-
+  
+  security.polkit.enable = true;
+  
 
   # Set your time zone:
   time.timeZone = "Europe/Moscow";

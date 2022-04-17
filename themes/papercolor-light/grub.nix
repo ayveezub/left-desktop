@@ -23,10 +23,9 @@
   boot.loader.grub = {
     backgroundColor = "#005F87"; # background color to be used for GRUB to fill the areas the image isn't filling
     configurationLimit = 11; # maximum of configurations in boot menu (GRUB has problems when there are too many entries)
-    default = "0" # index of the default menu item to be booted (can also be set to "saved", which will make GRUB select the menu item that was used at the last boot)
+    default = "0"; # index of the default menu item to be booted (can also be set to "saved", which will make GRUB select the menu item that was used at the last boot)
     memtest86.enable = true; # Make Memtest86+ (or MemTest86 if EFI support is enabled), available from the GRUB boot menu
-    theme = pkgs.nixos-grub2-theme; # Grub theme to be used
-    timeout = 5; # alias of `boot.loader.timeout`
+    #theme = pkgs.nixos-grub2-theme; # Grub theme to be used
     #useOSProber = true; # append entries for other OSs detected by os-prober
   };
 }

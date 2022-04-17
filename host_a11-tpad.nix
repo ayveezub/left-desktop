@@ -1,6 +1,14 @@
 { config, pkgs, lib, ... }:
 
-{
+let 
+  # Install a package from unstable while remaining on the stable channel:
+  # 
+  # `sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable`
+  # `sudo nix-channel --update`
+  # 
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+
+in {
   imports = [
     # Include the results of the hardware scan:
     ./hardware-configuration.nix
@@ -83,8 +91,8 @@
 
   # `nixos-rebuild` for `a11-tpad` machine:
   environment.shellAliases = {
-    ld-rb = "sudo nixos-rebuild boot --flake '/etc/nixos#a11-tpad' && ld-apply-theme";
-    ld-rs = "sudo nixos-rebuild switch --flake '/etc/nixos#a11-tpad' && ld-apply-theme";
+    ld-rb = "sudo nixos-rebuild boot && ld-apply-theme";
+    ld-rs = "sudo nixos-rebuild switch && ld-apply-theme";
   };
 
   # Append entries for other OSs detected by os-prober:
