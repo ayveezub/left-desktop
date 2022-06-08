@@ -89,8 +89,8 @@ in {
 
   # `nixos-rebuild` for `a11-dtop` machine:
   environment.shellAliases = {
-    ld-rb = "sudo nixos-rebuild boot && ld-apply-theme";
-    ld-rs = "sudo nixos-rebuild switch && ld-apply-theme";
+    ld-rb = "sudo nixos-rebuild boot";
+    ld-rs = "sudo nixos-rebuild switch";
   };
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
@@ -135,5 +135,5 @@ in {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "21.11"; # Did you read the comment?
+  system.stateVersion = "22.05"; # Did you read the comment?
 }
