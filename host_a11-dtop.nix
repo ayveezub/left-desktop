@@ -47,7 +47,7 @@ in {
     ./extra-packages/messengers.nix
     ./extra-packages/obsidian.nix
     ./extra-packages/steam.nix
-    #./extra-packages/tor-browser.nix
+    ./extra-packages/tor-browser.nix
     ./extra-packages/wine.nix
 
     # Hardware:
